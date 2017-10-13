@@ -1,6 +1,6 @@
 /*
    10 - 12 - 2017
-   ECE 411
+   ECE 411 Team 14
    Portland, OR
   (Modified) LiquidCrystal Library - Autoscroll
                                    - Uses the Arduino RedBoard

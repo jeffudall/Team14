@@ -40,9 +40,9 @@
 
  http://www.arduino.cc/en/Tutorial/LiquidCrystalAutoscroll
 
- Idea: us an array for a senetence; iterate over the sentence
-       in a for loop and use lcd.write(char) to write a char
-       at a time
+ Idea to try: us an array for a senetence; iterate over the sentence
+              in a for loop and use lcd.write(char) to write a char
+              at a time
 */
 
 //Create a unique char
@@ -76,7 +76,7 @@ void loop() {
   lcd.setCursor(16, 1);
   // set the display to automatically scroll:
   lcd.autoscroll();
-  // print from 0 to 9:
+  //Print the first smiley
   lcd.write(byte(0));
   //Print a space between the first smiley and the next char
   lcd.print(" "); 
@@ -91,7 +91,7 @@ void loop() {
     else if(thisChar == 3)
        lcd.print("Rulezz ");
     else
-       thisChar = 10;
+       thisChar = 10; //exit the for-loop if thisChar isn't in the interval [0, 4]
     delay(500);
   }
     //Write out another smiley char, don't need a space before

@@ -1,3 +1,6 @@
+//Version 3 detects ambient light when the "clear" reading drops below 200
+//Also detects red, green, and blue, else prints an error message
+
 #include <Wire.h>
 #include "Adafruit_TCS34725.h"
 #include <LiquidCrystal.h>

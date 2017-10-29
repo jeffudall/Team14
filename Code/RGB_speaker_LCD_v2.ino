@@ -4,7 +4,7 @@ ECE 411
 10/29/2017
 
 Color Detecting Program
-Version 2.0
+Version 3.0
 
 Short description:
 

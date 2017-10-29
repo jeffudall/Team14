@@ -1,3 +1,44 @@
+/*  
+Group 14
+ECE 411
+10/29/2017
+
+Color Detecting Program
+Version 2.0
+
+Short description:
+
+  Detects color using an RBG sensor. The user is able to see the detected color using the LCD or hear it spoken
+  using the speaker (requires SD card module and microSD card).
+  
+Long description:
+  
+  This program uses an SD card module to store audio files, which are recordings of different colors (e.g. "red", 
+  "yellow", "blue", "green") being spoken. A speaker is used to output the sound. A Liquid Crystal Display (LCD) 
+  is used as an alternative to the speaker, in order to display the name of the detected color.
+  
+  A state bit keeps track of which "mode" the user wants to be in: 
+  
+  0 for visual mode (using the LCD)
+  1 for audio mode (using the speaker) 
+  
+  The user can specify the file names directly as shown in the code
+  below. For instance, if the file name is "SQUUP8~1.WAV", then the setFile("filename") function is called in order 
+  to set the specified file name:
+   
+  SdPlay.setFile("SQUUP8~1.WAV");
+  
+  All serial prints have been ommitted from this version in order to reduce any unnecessary complexity. If the user
+  wants to use the Serial Monitor tool in order to see the printed values of the colors (for example to determine the
+  C, R, G, and B values from the RGB sensor to program new color detection), then they should use the other simpler
+  program, which only uses the RBG (and / or the LCD).
+
+  Bugs: in audio mode, the speaker plays beeps when blue is detected on the RGB sensor (when the basic audio program
+        is played, the speaker functions correctly -- so the problem is likely using the free() function;
+        missing audio files to play for red, and for green;
+        missing yellow color detection in the control structure (import this solution from the other v3 program)
+*/
+
 #include <Wire.h>
 #include "Adafruit_TCS34725.h"
 #include <LiquidCrystal.h>
@@ -57,11 +98,6 @@ void loop() {
   tcs.getRawData(&red, &green, &blue, &clear);
 
   tcs.setInterrupt(true);  // turn off LED
-  
-  Serial.print("C:\t"); Serial.print(clear);
-  Serial.print("\tR:\t"); Serial.print(red);
-  Serial.print("\tG:\t"); Serial.print(green);
-  Serial.print("\tB:\t"); Serial.print(blue);
 
   // Figure out some basic hex code for visualization
   uint32_t sum = clear;
@@ -70,9 +106,6 @@ void loop() {
   g = green; g /= sum;
   b = blue; b /= sum;
   r *= 256; g *= 256; b *= 256;
-  Serial.print("\t");
-  Serial.print((int)r, HEX); Serial.print((int)g, HEX); Serial.print((int)b, HEX);
-  Serial.println();
 
 //If !state is true, then we are running in visual mode (using the LCD)
 if(!state){

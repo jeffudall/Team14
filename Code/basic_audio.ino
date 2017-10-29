@@ -1,4 +1,7 @@
 /*
+ Credit source code: 
+ https://github.com/isramos/mico-shield/blob/master/libraries/SimpleSDAudio/examples/AbsoluteMinimum/AbsoluteMinimum.ino
+
  SimpleSDAudio absolute minimum example, plays file EXAMPLE.AFM from root folder of SD card (CS on pin 4)
  through speaker/amplifier at pin 9 for ATmega328 / pin 44 for ATmega1280/2560.
  */

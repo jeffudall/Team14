@@ -22,11 +22,16 @@ Long description:
   0 for visual mode (using the LCD)
   1 for audio mode (using the speaker) 
   
-  The user can specify the file names directly as shown in the code
-  below. For instance, if the file name is "SQUUP8~1.WAV", then the setFile("filename") function is called in order 
+  The user can specify the file names directly as shown in the void loop, for when the state bit is 1. For instance, 
+  if the file name is "SQUUP8~1.WAV", then the setFile("filename") function is called in order 
   to set the specified file name:
    
   SdPlay.setFile("SQUUP8~1.WAV");
+  
+  Finally, the play() function can be called in order to play on the speaker the last file name that was set using
+  setFile():
+  
+  SdPlay.play();
   
   All serial prints have been ommitted from this version in order to reduce any unnecessary complexity. If the user
   wants to use the Serial Monitor tool in order to see the printed values of the colors (for example to determine the

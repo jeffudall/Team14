@@ -60,14 +60,13 @@ Long description:
 // set to false if using a common cathode LED
 #define commonAnode true
 
-// our RGB -> eye-recognized gamma color
-//byte gammatable[256];
+//Convert our RGB -> eye-recognized gamma color
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 // Create static buffer 
 //#define BIGBUFSIZE (1024)      // bigger than 2*512 is often only possible on Arduino megas!
-    uint8_t bigbuf[1024];
+uint8_t bigbuf[1024];
 Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
 
 void setup() {
@@ -155,7 +154,8 @@ if(state){
   else if(b > r || b > g){ //If here then the dominant color is blue
     SdPlay.setFile("SQUUP8~1.WAV");
     SdPlay.play();
-    delay(4000);
+    delay(4000); //The audio files typically last at least 3 - 4 sec, so a 4 sec delay is used here
+                 //Could also poll the isPlaying function until it returns false (not playing)
     }
   else //If here then there is some error on the sensor readings
     delay(1);

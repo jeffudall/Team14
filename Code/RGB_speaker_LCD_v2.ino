@@ -8,8 +8,8 @@ Version 2.0
 
 Short description:
 
-  Detects color using an RBG sensor. The user is able to see the detected color using the LCD or hear it spoken
-  using the speaker (requires SD card module and microSD card).
+  Detects color using an RBG sensor. The user is able to see the name of the detected color using the LCD or hear it 
+  spoken using the speaker (requires SD card module and microSD card).
   
 Long description:
   

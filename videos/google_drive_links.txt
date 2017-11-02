@@ -3,3 +3,8 @@ Not sure how to upload videos (larger than 25 MB not accepted?) to git.
 Here's the google drive link to the video of the speaker working with the RGB sensor:
 
 https://drive.google.com/a/pdx.edu/file/d/0B2xjN2Vtsn0jbUI3cDFJcDRBUm8/view?usp=sharing
+
+
+Video of new LCD demo
+
+https://drive.google.com/open?id=0B6vxZIn4T96eQ21icXgxQTdLRFE

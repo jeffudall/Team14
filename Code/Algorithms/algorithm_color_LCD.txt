@@ -17,7 +17,7 @@ void setup:
 	(Optional: use PhilB's loop to create RGB table)
 	GO TO: void loop
 
-Do all repetitive (i.e. behavior the program repeats forever) in void loop, which loops forever until power is lost
+Do all repetitive (i.e. behavior the program repeats forever) code in void loop, which loops forever until power is lost
 void loop:
 	Create local variables (clear, red, green, blue) for calculating sensor's detected values
 	Turn on LED (set interrupt mode to false:   tcs.setInterrupt(false);)

@@ -1,4 +1,4 @@
-Get extra (.h) files: Wire.h, Adafruit_TCS34725.h, and LiquidCrystal.h
+Get extra (.h or header) files: Wire.h, Adafruit_TCS34725.h, and LiquidCrystal.h
 Create analog outputs for RGB pins
 Set commonAnode (false for common cathode)
 Create container (e.g. array) for storing detected RGB values (if using PhilB's table, the values can be used to light LEDs)

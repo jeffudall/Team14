@@ -6,7 +6,7 @@ Create input parameters (rs, enable, d4 - d7) for the LCD object
 Create LCD object using the input parameters (rs, enable, d4 - d7)
 Initialize color sensor (using Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);)
 
-Do all initializations (i.e. code required only once) in void setup
+Do all other initializations (i.e. code required only once) in void setup
 void setup:
 	Set up LCD's columns and rows
 	Set data rate (bits per sec or baud) for serial data transmission

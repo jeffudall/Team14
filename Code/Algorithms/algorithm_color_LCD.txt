@@ -1,0 +1,39 @@
+Get extra (.h) files: Wire.h, Adafruit_TCS34725.h, and LiquidCrystal.h
+Create analog outputs for RGB pins
+Set commonAnode (false for common cathode)
+Create container (e.g. array) for storing detected RGB values (if using PhilB's table, the values can be used to light LEDs)
+Create input parameters (rs, enable, d4 - d7) for the LCD object
+Create LCD object using the input parameters (rs, enable, d4 - d7)
+Initialize color sensor using (Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);)
+
+MAINLINE:
+	Set up LCD's columns and rows
+	Set data rate (bits per sec or baud) for serial data transmission
+	(Optional: test serial monitor output by showing message: Color View Test!
+	Set the LCD for no auto-scrolling
+	Call (tcs.begin()) color sensor init function (optional: print to serial monitor the function call was success or failure)
+	Set RGB pins values and mode for OUTPUT (using pinMode(value, MODE);)
+	(Optional: use PhilB's loop to create RGB table)
+	GO TO: VOID LOOP
+
+VOID LOOP:
+	Create local variables (clear, red, green, blue) for calculating sensor's detected values
+	Turn on LED (set interrupt mode to false:   tcs.setInterrupt(false);)
+	Wait at least 60ms (use a delay) to read the sensor values
+	Get the sensor values (use tcs.getRawData(&red, &green, &blue, &clear);)
+	Turn off LED
+	Print the detected values to serial monitor
+	Compute the "basic hex code for visualization"
+	Print results of computation to serial monitor
+	IF red is greater than green OR red is greater than blue:
+								Print to LCD "red"
+	ELSE IF green is greater than red OR green is greater than blue:
+								Print to LCD "green"
+	ELSE IF blue is greater than red OR blue is greater than green:
+								Print to LCD "blue"
+	ELSE
+								Print to LCD "ambient"
+	(Optional: for color visualization, write the values of red, green, and blue to the output pins)
+	Wait 1 second (delay)
+	Clear the LCD screen
+	GO TO: VOID LOOP

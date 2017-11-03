@@ -1,7 +1,7 @@
 /*
 Uses the RedBoard LCD and the TCS34725 to display the color (on the LCD).
 Version 1.0 - Not accurate (for blue or ambient detection), but green and red work
-/*
+*/
 #include <Wire.h>
 #include "Adafruit_TCS34725.h"
 #include <LiquidCrystal.h>

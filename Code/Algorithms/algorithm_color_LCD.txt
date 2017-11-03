@@ -4,7 +4,7 @@ Set commonAnode (false for common cathode)
 Create container (e.g. array) for storing detected RGB values (if using PhilB's table, the values can be used to light LEDs)
 Create input parameters (rs, enable, d4 - d7) for the LCD object
 Create LCD object using the input parameters (rs, enable, d4 - d7)
-Initialize color sensor using (Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);)
+Initialize color sensor (using Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);)
 
 MAINLINE:
 	Set up LCD's columns and rows

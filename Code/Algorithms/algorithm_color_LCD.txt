@@ -38,4 +38,4 @@ void loop:
 	(Optional: for color visualization, write the values of red, green, and blue to the output pins)
 	Wait 1 second (delay)
 	Clear the LCD screen
-	GO TO: VOID LOOP
+	GO TO: void loop

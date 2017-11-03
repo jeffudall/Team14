@@ -9,7 +9,7 @@ Initialize color sensor (using Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS3472
 Do all other initializations (i.e. code required only once) in void setup
 void setup:
 	Set up LCD's columns and rows
-	Set data rate (bits per sec or baud) for serial data transmission
+	Set data rate (bits per sec or baud) for serial data transmission (use Serial.begin(9600);)
 	(Optional: test serial monitor output by showing message: Color View Test!)
 	Set the LCD for no auto-scrolling
 	Call (tcs.begin()) color sensor init function (optional: print to serial monitor the function call was success or failure)

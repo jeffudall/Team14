@@ -28,9 +28,9 @@ ________________________________________________________________________________
 
 Version 5.0 
 _____________________________________________________________________________________________________________________________
-                 Detects white (ambient), black, red, orange, yellow, green, blue, brown, purple, and pink
-                 Stores the last detected color if the LED pin is grounded
-	         Uses functions to increase: abstraction, modularity, and maintainability
+                 Detects white (ambient), black, red, orange, yellow, green, blue, brown, purple, and pink.
+                 Stores the last detected color if the LED pin is grounded.
+	         Uses functions to increase: abstraction, modularity, and maintainability.
 _____________________________________________________________________________________________________________________________
 */
 

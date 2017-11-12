@@ -38,6 +38,7 @@ ________________________________________________________________________________
 	         Uses functions to increase: abstraction, modularity, and maintainability.
 _____________________________________________________________________________________________________________________________
 */
+
 //Get libraries of code for functions needed in this program
 #include <SPI.h>
 #include <Wire.h>

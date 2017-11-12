@@ -136,7 +136,7 @@ boolean is_green(void) {
 }
 
 boolean is_blue(void) {
-  //Are we receiving green sensor readings?
+  //Are we receiving blue sensor readings?
   if(red > 800 & red < 1500 & green > 2900 & green < 4200 & blue > 6000 & blue < 9000) //Yes, so return true
     return 1;
   else //No, so return false

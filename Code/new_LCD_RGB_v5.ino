@@ -18,18 +18,34 @@ ________________________________________________________________________________
 		  of this device. For instance, detecting “light green” versus “dark green” could be difficult if not impossible 
 		  because the RGB sensor readings are close to other colors. Also, unless the object is within 1 cm or less of 
 		  the RGB sensor's photodiode array, the sensor's accuracy becomes worse. (Each photodiode in the array is 
-		  responsible for one of the detected values of clear, red, green, and blue.)
+		  responsible for one of the detected values of clear, red, green, and blue, which are controlled internally
+		  by a Finite State Machine.)
 		  
-		  Potential RGB sensor values: [0, 20,0000+]
-		  Potential OLED actuator text: "Ambient", "Black", "Gray", "Blue", "Red", "Yellow", "Green", "Purple",
-		  				"Pink", "Orange", "Brown", "Retry"
+		  Expected input range (RGB sensor values): [0, 20,0000+] (dimensionless positive integers)
+		  Expected output (OLED actuator text): "Ambient", "Black", "Gray", "Blue", "Red", "Yellow", "Green", "Purple",
+		  				"Pink", "Orange", "Brown", "Retry" (string of characters)
+						
+		  If the RGB's LED pin is grounded, then the program will display the last detected label. Once the LED pin 
+		  is ungrounded, the OLED will start to detect new colors again. The program displays the color detected on 
+		  the OLED, which can (among other things) display white font on a black background, or black font on a white 
+		  background. 
 		  
 		  This program detects ambient, black, gray, blue, red, yellow, green, purple, brown, pink, and orange, 
 		  using the RGB sensor. If the RGB sensor data does not map to one of these labels, then it displays "Retry"
-		  until it detects a known label mapping. If the RGB's LED pin is grounded, then the program will display
-		  the last detected label. Once the LED pin is ungrounded, the OLED will start to detect new colors again.
-		  The program displays the color detected on the OLED, which can (among other things) display white font on a 
-		  black background, or black font on a white background. 
+		  until it detects a known label mapping. 
+		  
+		  The control logic for this program operates under the following assumption: a solid object is presented 
+		  to the RGB sensor, within (or less than) 1 cm. The OLED's LED pin becomes ungrounded (after previously
+		  being grounded), and gets the RGBC values of the object. Then, an if-else structure determines which color
+		  was detected. Multiple solid objects of distinct colors were tested such that the unique colors tested
+		  were mapped to the following ranges for R, G, and B:
+		  
+		  r_l < R < r_h ; 		g_l < G < g_h ; 		b_l < B < b_h;
+		  
+		  where the _l and _h subscripts indicate the lower and higher bounds of the detected value, respectively.
+		  This means that after presenting a red object to the sensor, the values for R, G, and B can be approximated
+		  using the Serial Monitor. Once approximated, the lower and higher bounds that the color could assume were 
+		  determined and implemented in the control structure.
 		  
 		  Helper functions from the RGB_OLED_Helper_Functions.h file were created by our team to facilitate the 
 		  heavy-lifting for the program. 

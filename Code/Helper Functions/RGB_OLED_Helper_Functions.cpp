@@ -341,7 +341,7 @@ boolean print_retry(void){
   display.setCursor(0,0);
   display.println("Retry");
   display.display();
-  delay(500); //Wait 1 sec because we don't want to be waiting long for the "Retry" label
+  delay(500); //Wait 0.5 sec because we don't want to be waiting long for the "Retry" label
 	 
   return 1; //Return success to the calling routine
 }

@@ -38,7 +38,6 @@ ________________________________________________________________________________
 	         Uses functions to increase: abstraction, modularity, and maintainability.
 _____________________________________________________________________________________________________________________________
 */
-
 //Get libraries of code for functions needed in this program
 #include <SPI.h>
 #include <Wire.h>
@@ -60,18 +59,15 @@ void setup() {
   if(init_RGB_OLED())
 	      Serial.println("Initialization successful\n");
   else
-	      Serial.println("Initialization failed\n");
-	  
+	      Serial.println("Initialization failed\n");  
 }
 
 //Execute void loop() function forever, as long as the circuit has power
 void loop() {
-	
   //Check RGB sensor and get the data, then print it to the Serial Monitor
   get_and_print_RGB();
   //Get the color label (clabel) and print it to the OLED
   get_and_print_clabel();
   //Clear the last color detected
   display.clearDisplay(); 
-
 }

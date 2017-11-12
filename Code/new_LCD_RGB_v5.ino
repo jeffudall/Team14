@@ -24,7 +24,8 @@ ________________________________________________________________________________
 		  
 		  This program detects ambient, black, gray, blue, red, yellow, green, purple, brown, pink, and orange, 
 		  using the RGB sensor. If the RGB sensor data does not map to one of these labels, then it displays "Retry"
-		  until it detects a known label mapping. 
+		  until it detects a known label mapping. If the RGB's LED pin is grounded, then the program will display
+		  the last detected label. Once the LED pin is ungrounded, the OLED will start to detect new colors again.
 		  The program displays the color detected on the OLED, which can (among other things) display white font on a 
 		  black background, or black font on a white background. 
 		  

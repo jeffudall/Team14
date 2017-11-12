@@ -4,7 +4,7 @@ Group 14
 ECE 411
 11/11/2017
 
-Short descripttion:
+Short description: 
 _____________________________________________________________________________________________________________________________
                   Uses the TCS34725 RGB sensor to detect a color and the 326 OLED actuator to display the color detected.
 _____________________________________________________________________________________________________________________________
@@ -27,9 +27,9 @@ ________________________________________________________________________________
 
 Version 5.0 
 _____________________________________________________________________________________________________________________________
-            - detects white (ambient), black, red, orange, yellow, green, blue, brown, purple, and pink
-            - stores the last detected color if the LED pin is grounded
-	    - uses functions to increase: abstraction, modularity, and maintainability
+                 Detects white (ambient), black, red, orange, yellow, green, blue, brown, purple, and pink
+                 Stores the last detected color if the LED pin is grounded
+	         Uses functions to increase: abstraction, modularity, and maintainability
 _____________________________________________________________________________________________________________________________
 */
 

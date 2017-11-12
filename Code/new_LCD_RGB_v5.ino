@@ -19,6 +19,10 @@ ________________________________________________________________________________
 		  detecting “light green” versus “dark green” could be difficult if not impossible because the RGB sensor 
 		  readings are close to other colors. 
 		  
+		  Potential RGB sensor values: [0, 20,0000+]
+		  Potential OLED actuator text: "Ambient", "Black", "Gray", "Blue", "Red", "Yellow", "Green", "Purple",
+		  				"Pink", "Orange"
+		  
 		  This program detects ambient, black, gray, blue, red, yellow, green, purple, pink, and orange, using the 
 		  RGB sensor. The program displays the color detected on the OLED, which can (among other things) display 
 		  white font on a black background, or black font on a white background. 

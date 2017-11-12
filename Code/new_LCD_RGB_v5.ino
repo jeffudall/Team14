@@ -19,7 +19,7 @@ ________________________________________________________________________________
 		  because the RGB sensor readings are close to other colors. Also, unless the object is within 1 cm or less of 
 		  the RGB sensor's photodiode array, the sensor's accuracy becomes worse. (Each photodiode in the array is 
 		  responsible for one of the detected values of clear, red, green, and blue, which are controlled internally
-		  by a Finite State Machine.)
+		  by a Finite State Machine.) The OLED uses Serial Peripheral Interface (SPI) to communicate with the Arduino.
 		  
 		  Expected input range (RGB sensor values): [0, 20,0000+] (dimensionless positive integers)
 		  Expected output (OLED actuator text): "Ambient", "Black", "Gray", "Blue", "Red", "Yellow", "Green", "Purple",

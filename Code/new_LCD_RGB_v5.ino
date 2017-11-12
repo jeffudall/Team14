@@ -56,7 +56,6 @@ uint16_t clear, red, green, blue;
 
 //Execute void setup() function only once
 void setup() {
-	
   if(init_RGB_OLED())
 	      Serial.println("Initialization successful\n");
   else

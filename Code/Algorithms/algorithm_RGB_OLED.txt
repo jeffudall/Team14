@@ -18,4 +18,4 @@ void loop:
   Get the RGB sensor data, then print RGB data to the Serial Monitor (using get_and_print_RGB())
   Get the color label and print it to the OLED (using get_and_print_clabel())
   Clear the OLED (using clearDisplay())
-	GO TO: void loop
+  GO TO: void loop

@@ -1,8 +1,36 @@
 /*
-Uses the 326 LCD and the TCS34725 to display the color (on the LCD).
-Version 5.0 - detects white (ambient), black, red, orange, yellow, green, blue, brown, purple, and pink
+
+Group 14
+ECE 411
+11/11/2017
+
+Short descripttion:
+_____________________________________________________________________________________________________________________________
+                   Uses the TCS34725 RGB sensor to detect a color and the 326 OLED actuator to display the color detected.
+_____________________________________________________________________________________________________________________________
+
+Long description: 
+_____________________________________________________________________________________________________________________________
+                  The TCS34725 RGB sensor allows for detection of clear, red, green, and blue colors.
+		  Each sensor value (for clear, red, green, and blue) is a base-ten number, which can be used to distinguish
+		  different colors from each other. There are limitations to the capability of this device. For instance, 
+		  detecting “light green” versus “dark green” could be difficult if not impossible because the RGB sensor 
+		  readings are close to other colors. 
+		  
+		  This program detects ambient, black, gray, blue, red, yellow, green, purple, pink, and orange, using the 
+		  RGB sensor. The program displays the color detected on the OLED, which can (among other things) display 
+		  white font on a black background, or black font on a white background. 
+		  
+		  Helper functions from the RGB_OLED_Helper_Functions.h file were created by our team to facilitate the 
+		  heavy-lifting for the program. 
+_____________________________________________________________________________________________________________________________
+
+Version 5.0 
+_____________________________________________________________________________________________________________________________
+            - detects white (ambient), black, red, orange, yellow, green, blue, brown, purple, and pink
             - stores the last detected color if the LED pin is grounded
 	    - uses functions to increase: abstraction, modularity, and maintainability
+_____________________________________________________________________________________________________________________________
 */
 
 //Get libraries of code for functions needed in this program

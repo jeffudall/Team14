@@ -6,7 +6,7 @@ ECE 411
 
 Short descripttion:
 _____________________________________________________________________________________________________________________________
-                   Uses the TCS34725 RGB sensor to detect a color and the 326 OLED actuator to display the color detected.
+                  Uses the TCS34725 RGB sensor to detect a color and the 326 OLED actuator to display the color detected.
 _____________________________________________________________________________________________________________________________
 
 Long description: 

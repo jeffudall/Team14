@@ -65,7 +65,7 @@ void setup() {
 	  
 }
 
-//Execute void loop() forever, as long as the circuit has power
+//Execute void loop() function forever, as long as the circuit has power
 void loop() {
 	
   //Check RGB sensor and get the data, then print it to the Serial Monitor

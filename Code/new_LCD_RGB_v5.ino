@@ -44,8 +44,8 @@ ________________________________________________________________________________
 		  
 		  where the _l and _h subscripts indicate the lower and higher bounds of the detected value, respectively.
 		  This means that after presenting a red object to the sensor, the values for R, G, and B can be approximated
-		  using the Serial Monitor. Once approximated, the lower and higher bounds that the color could assume were 
-		  determined and implemented in the control structure.
+		  using the Serial Monitor. Once approximated, the lower and higher bounds that red could assume were 
+		  implemented in the control structure (shown in the .cpp file for the helper functions).
 		  
 		  Helper functions from the RGB_OLED_Helper_Functions.h file were created by our team to facilitate the 
 		  heavy-lifting for the program. 

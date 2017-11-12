@@ -20,7 +20,7 @@ ________________________________________________________________________________
 		  
 		  Potential RGB sensor values: [0, 20,0000+]
 		  Potential OLED actuator text: "Ambient", "Black", "Gray", "Blue", "Red", "Yellow", "Green", "Purple",
-		  				"Pink", "Orange", "Brown"
+		  				"Pink", "Orange", "Brown", "Retry"
 		  
 		  This program detects ambient, black, gray, blue, red, yellow, green, purple, brown, pink, and orange, 
 		  using the RGB sensor. The program displays the color detected on the OLED, which can (among other things) 

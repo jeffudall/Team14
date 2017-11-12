@@ -4,6 +4,7 @@ Group 14
 ECE 411
 11/11/2017
 
+
 Short description: 
 _____________________________________________________________________________________________________________________________
                   Uses the TCS34725 RGB sensor to detect a color and the 326 OLED actuator to display the color detected.

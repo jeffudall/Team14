@@ -13,19 +13,19 @@ ________________________________________________________________________________
 
 Long description: 
 _____________________________________________________________________________________________________________________________
-                  The TCS34725 RGB sensor allows for detection of clear, red, green, and blue colors.
-		  Each sensor value (for clear, red, green, and blue) is a base-ten number, which can be used to distinguish
-		  different colors from each other. There are limitations to the capability of this device. For instance, 
-		  detecting “light green” versus “dark green” could be difficult if not impossible because the RGB sensor 
-		  readings are close to other colors. 
+                  The TCS34725 RGB sensor allows for detection of clear, red, green, and blue light as distinct components
+		  of incident light (to the sensor). Each sensor value (for clear, red, green, and blue) is a base-ten number, 
+		  which can be used to distinguish different colors from each other. There are limitations to the capability 
+		  of this device. For instance, detecting “light green” versus “dark green” could be difficult if not impossible 
+		  because the RGB sensor readings are close to other colors. 
 		  
 		  Potential RGB sensor values: [0, 20,0000+]
 		  Potential OLED actuator text: "Ambient", "Black", "Gray", "Blue", "Red", "Yellow", "Green", "Purple",
-		  				"Pink", "Orange"
+		  				"Pink", "Orange", "Brown"
 		  
-		  This program detects ambient, black, gray, blue, red, yellow, green, purple, pink, and orange, using the 
-		  RGB sensor. The program displays the color detected on the OLED, which can (among other things) display 
-		  white font on a black background, or black font on a white background. 
+		  This program detects ambient, black, gray, blue, red, yellow, green, purple, brown, pink, and orange, 
+		  using the RGB sensor. The program displays the color detected on the OLED, which can (among other things) 
+		  display white font on a black background, or black font on a white background. 
 		  
 		  Helper functions from the RGB_OLED_Helper_Functions.h file were created by our team to facilitate the 
 		  heavy-lifting for the program. 

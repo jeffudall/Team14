@@ -2,7 +2,7 @@
 Uses the 326 LCD and the TCS34725 to display the color (on the LCD).
 Version 5.0 - detects white (ambient), black, red, orange, yellow, green, blue, brown, purple, and pink
             - stores the last detected color if the LED pin is grounded
-			- uses functions to increase: abstraction, modularity, and maintainability
+	    - uses functions to increase: abstraction, modularity, and maintainability
 */
 
 //Get libraries of code for functions needed in this program

@@ -7,15 +7,15 @@ Create variables (16-bit unsigned ints) for storing RGB (and clear) data
 (Do all other initializations, i.e. code required only once, in the void setup)
 void setup:
   IF the RGB and LCD initialization function returns true:
-  								Print to Serial Monitor "Initialization successful"
+  	Print to Serial Monitor "Initialization successful"
   ELSE
-    							Print to Serial Monitor "Initialization failed"
-                  Optional: abort execution to void loop
-	GO TO: void loop
+    	Print to Serial Monitor "Initialization failed"
+        Optional: abort execution to void loop
+  GO TO: void loop
 
 (Do all repetitive code, i.e. behavior the program repeats forever, in the void loop, which loops forever until power is lost)
 void loop:
-	Get the RGB sensor data, then print RGB data to the Serial Monitor (using get_and_print_RGB())
+  Get the RGB sensor data, then print RGB data to the Serial Monitor (using get_and_print_RGB())
   Get the color label and print it to the OLED (using get_and_print_clabel())
   Clear the OLED (using clearDisplay())
 	GO TO: void loop

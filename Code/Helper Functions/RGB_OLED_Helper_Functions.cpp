@@ -10,6 +10,7 @@
 
 #include <RGB_OLED_Helper_Functions.h>
 
+//Initialization code for the baud rate, RGB sensor, and OLED actuator
 boolean init_RGB_OLED(void) {
   Serial.begin(9600); //Set the data rate (baud - bits per sec) for transmission
   //326 LCD init start

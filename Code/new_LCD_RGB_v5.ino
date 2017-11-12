@@ -23,8 +23,10 @@ ________________________________________________________________________________
 		  				"Pink", "Orange", "Brown", "Retry"
 		  
 		  This program detects ambient, black, gray, blue, red, yellow, green, purple, brown, pink, and orange, 
-		  using the RGB sensor. The program displays the color detected on the OLED, which can (among other things) 
-		  display white font on a black background, or black font on a white background. 
+		  using the RGB sensor. If the RGB sensor data does not map to one of these labels, then it displays "Retry"
+		  until it detects a known label mapping. 
+		  The program displays the color detected on the OLED, which can (among other things) display white font on a 
+		  black background, or black font on a white background. 
 		  
 		  Helper functions from the RGB_OLED_Helper_Functions.h file were created by our team to facilitate the 
 		  heavy-lifting for the program. 

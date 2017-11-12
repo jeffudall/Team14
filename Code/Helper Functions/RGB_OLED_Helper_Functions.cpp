@@ -91,7 +91,7 @@ boolean is_ambient(void) {
 boolean is_black(void) {
   //Are we receiving black sensor readings?
   if(clear > 1500 & clear < 3500) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -99,7 +99,7 @@ boolean is_black(void) {
 boolean is_gray(void) {
   //Are we receiving gray sensor readings?
   if(red > 800 & red < 2200 & green > 2800 & green < 4000 & blue > 2500 & blue < 3400) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -107,7 +107,7 @@ boolean is_gray(void) {
 boolean is_orange(void) {
   //Are we receiving orange sensor readings?
   if(red > 7000 & red < 11000 & green > 2200 & green < 4800 & blue > 1300 & blue < 3500) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -115,7 +115,7 @@ boolean is_orange(void) {
 boolean is_yellow(void) {
   //Are we receiving yellow sensor readings?
   if(red > 12500 & red < 16000 & green > 10000 & green < 15500 & blue > 4000 & blue < 7300) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -123,7 +123,7 @@ boolean is_yellow(void) {
 boolean is_red(void) {
   //Are we receiving red sensor readings?
   if(red > 5500 & red < 7000 & green > 900 & green < 2000 & blue > 1200 & blue < 2700) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -131,7 +131,7 @@ boolean is_red(void) {
 boolean is_green(void) {
   //Are we receiving green sensor readings?
   if(red > 1500 & red < 3000 & green > 5000 & green < 6700 & blue > 1600 & blue < 4500) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -139,7 +139,7 @@ boolean is_green(void) {
 boolean is_blue(void) {
   //Are we receiving blue sensor readings?
   if(red > 800 & red < 1500 & green > 2900 & green < 4200 & blue > 6000 & blue < 9000) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -147,7 +147,7 @@ boolean is_blue(void) {
 boolean is_brown(void) {
   //Are we receiving brown sensor readings?
   if(red > 1500 & red < 2000 & green > 1500 & green < 2500 & blue > 1000 & blue < 1800) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -155,7 +155,7 @@ boolean is_brown(void) {
 boolean is_purple(void) {
   //Are we receiving purple sensor readings?
   if(red > 700 & red < 1200 & green > 1900 & green < 2300 & blue > 2300 & blue < 3200) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
@@ -163,185 +163,185 @@ boolean is_purple(void) {
 boolean is_pink(void) {
   //Are we receiving pink sensor readings?
   if(red > 6000 & red < 7100 & green > 3400 & green < 4200 & blue > 6000 & blue < 7500) //Yes, so return true
-    return 1;
+    	  return 1;
   else //No, so return false
 	  return 0;
 }
 
 
 boolean print_ambient(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Ambient");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Ambient");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_black(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Black");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Black");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_gray(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Gray");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Gray");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_orange(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Orange");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Orange");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_yellow(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Yellow");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Yellow");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_red(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Red");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Red");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_green(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Green");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Green");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_blue(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Blue");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Blue");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_brown(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Brown");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Brown");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_purple(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Purple");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Purple");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_pink(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Pink");
-    display.display();
-    delay(COLOR_DELAY);
-    tcs.getRawData(&red, &green, &blue, &clear); //check if 
-    while(clear < 1400 & red < 550 & green < 500 & blue < 400)
-         tcs.getRawData(&red, &green, &blue, &clear); //check if the values changed
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Pink");
+  display.display();
+  delay(COLOR_DELAY);
+  tcs.getRawData(&red, &green, &blue, &clear); //check if OLED's LED pin is grounded
+  while(clear < 1400 & red < 550 & green < 500 & blue < 400)
+       tcs.getRawData(&red, &green, &blue, &clear); //Stay in loop until OLED'S LED pin becomes ungrounded
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }
 
 boolean print_retry(void){
-    //Print the label
-    display.setTextSize(2);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.println("Retry");
-    display.display();
-    delay(500); //Wait 1 sec because we don't want to be waiting long for the "Retry" label
+  //Print the label
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Retry");
+  display.display();
+  delay(500); //Wait 1 sec because we don't want to be waiting long for the "Retry" label
 	 
-    return 1; //Return success to the calling routine
+  return 1; //Return success to the calling routine
 }

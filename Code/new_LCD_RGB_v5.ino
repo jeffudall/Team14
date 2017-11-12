@@ -10,6 +10,7 @@ ________________________________________________________________________________
                   Uses the TCS34725 RGB sensor to detect a color and the 326 OLED actuator to display the color detected.
 _____________________________________________________________________________________________________________________________
 
+
 Long description: 
 _____________________________________________________________________________________________________________________________
                   The TCS34725 RGB sensor allows for detection of clear, red, green, and blue colors.
@@ -25,6 +26,7 @@ ________________________________________________________________________________
 		  Helper functions from the RGB_OLED_Helper_Functions.h file were created by our team to facilitate the 
 		  heavy-lifting for the program. 
 _____________________________________________________________________________________________________________________________
+
 
 Version 5.0 
 _____________________________________________________________________________________________________________________________
@@ -68,5 +70,5 @@ void loop() {
   get_and_print_clabel();
   //Clear the last color detected
   display.clearDisplay(); 
-  
+
 }

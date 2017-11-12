@@ -16,7 +16,9 @@ ________________________________________________________________________________
 		  of incident light (to the sensor). Each sensor value (for clear, red, green, and blue) is a base-ten number, 
 		  which can be used to distinguish different colors from each other. There are limitations to the capability 
 		  of this device. For instance, detecting “light green” versus “dark green” could be difficult if not impossible 
-		  because the RGB sensor readings are close to other colors. 
+		  because the RGB sensor readings are close to other colors. Also, unless the object is within 1 cm or less of 
+		  the RGB sensor's photodiode array, the sensor's accuracy becomes worse. (Each photodiode in the array is 
+		  responsible for one of the detected values of clear, red, green, and blue.)
 		  
 		  Potential RGB sensor values: [0, 20,0000+]
 		  Potential OLED actuator text: "Ambient", "Black", "Gray", "Blue", "Red", "Yellow", "Green", "Purple",

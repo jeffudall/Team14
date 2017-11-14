@@ -5742,7 +5742,7 @@ Matthew Fleetwood</text>
 </plain>
 <instances>
 <instance part="ZU4" gate="G$1" x="175.26" y="20.32"/>
-<instance part="GND3" gate="1" x="124.46" y="40.64" rot="R180"/>
+<instance part="GND3" gate="1" x="124.46" y="35.56"/>
 <instance part="R2" gate="G$1" x="142.24" y="38.1" smashed="yes" rot="MR90">
 <attribute name="NAME" x="144.78" y="39.7764" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="144.145" y="37.592" size="1.778" layer="96" rot="MR180"/>

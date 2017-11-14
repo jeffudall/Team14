@@ -145,7 +145,7 @@
 Matt Fleetwood
 James Witcher
 Bruce Griffin</text>
-<text x="5.8" y="9.8" size="0.8128" layer="25">Version 0.4</text>
+<text x="5.8" y="9.8" size="0.8128" layer="25">Version 4.5</text>
 <text x="1.2" y="11.2" size="1.016" layer="25">Color Vision PCB</text>
 </plain>
 <libraries>
@@ -678,7 +678,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="9.75" y="46.505" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R1" library="SmartPrj" package="R0603-ROUND" value="10k" x="12.66" y="42.55" smashed="yes" rot="R90">
-<attribute name="NAME" x="15.171" y="42.061" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="15.171" y="40.861" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.692" y="41.661" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="R2" library="SmartPrj" package="R0603-ROUND" value="1M" x="9.74" y="16.06" smashed="yes" rot="R270">
@@ -711,7 +711,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="7.628" y="14.55" size="0.3556" layer="27" rot="R90"/>
 </element>
 <element name="ATMEGA328P" library="SmartPrj" package="DIL28-3" value="ATMEGA328P-PU" x="17.7" y="21.07" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.56" y="16.5724" size="1.778" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="18.76" y="3.6724" size="1.778" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="17.065" y="36.945" size="1.778" layer="27" ratio="10" rot="R270"/>
 </element>
 </elements>

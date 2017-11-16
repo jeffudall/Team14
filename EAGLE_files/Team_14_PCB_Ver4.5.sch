@@ -5711,16 +5711,17 @@ VDC 12V - 50mA</description>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="POWER_IN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="POWER_IN"/>
-<part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="R1" library="SmartPrj" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R3" library="SmartPrj" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="R4" library="SmartPrj" deviceset="R-EU_" device="R0603" value="1k"/>
-<part name="R5" library="SmartPrj" deviceset="R-EU_" device="R0603" value="4.7k"/>
-<part name="R6" library="SmartPrj" deviceset="R-EU_" device="R0603" value="4.7k"/>
 <part name="C1" library="SmartPrj" deviceset="C-EU" device="0603-RND" value="10u"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="R7" library="SmartPrj" deviceset="R-EU_" device="R0603" value="4.7k"/>
+<part name="R8" library="SmartPrj" deviceset="R-EU_" device="R0603" value="4.7k"/>
+<part name="P+7" library="supply1" deviceset="+5V" device=""/>
+<part name="P+8" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5782,9 +5783,6 @@ Matthew Fleetwood</text>
 </instance>
 <instance part="GND6" gate="1" x="124.46" y="5.08"/>
 <instance part="POWER_IN" gate="G$1" x="119.38" y="15.24"/>
-<instance part="P+7" gate="1" x="124.46" y="-7.62" smashed="yes">
-<attribute name="VALUE" x="126.365" y="-5.08" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="R1" gate="G$1" x="139.7" y="53.34" smashed="yes" rot="MR90">
 <attribute name="NAME" x="142.24" y="55.0164" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="141.605" y="52.832" size="1.778" layer="96" rot="MR180"/>
@@ -5797,14 +5795,6 @@ Matthew Fleetwood</text>
 <attribute name="NAME" x="176.1236" y="-22.86" size="1.778" layer="95" rot="MR90"/>
 <attribute name="VALUE" x="178.308" y="-23.495" size="1.778" layer="96" rot="MR90"/>
 </instance>
-<instance part="R5" gate="G$1" x="218.44" y="17.78" smashed="yes" rot="MR0">
-<attribute name="NAME" x="216.7636" y="20.32" size="1.778" layer="95" rot="MR90"/>
-<attribute name="VALUE" x="218.948" y="19.685" size="1.778" layer="96" rot="MR90"/>
-</instance>
-<instance part="R6" gate="G$1" x="226.06" y="15.24" smashed="yes" rot="MR0">
-<attribute name="NAME" x="224.3836" y="17.78" size="1.778" layer="95" rot="MR90"/>
-<attribute name="VALUE" x="226.568" y="17.145" size="1.778" layer="96" rot="MR90"/>
-</instance>
 <instance part="C1" gate="G$1" x="129.54" y="12.7" smashed="yes" rot="R180">
 <attribute name="NAME" x="123.317" y="14.605" size="1.778" layer="95"/>
 <attribute name="VALUE" x="121.666" y="12.065" size="1.778" layer="96"/>
@@ -5814,6 +5804,20 @@ Matthew Fleetwood</text>
 <attribute name="VALUE" x="149.225" y="30.48" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND8" gate="1" x="147.32" y="7.62"/>
+<instance part="R7" gate="G$1" x="220.98" y="25.4" smashed="yes" rot="MR270">
+<attribute name="NAME" x="218.44" y="23.7236" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="219.075" y="25.908" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="R8" gate="G$1" x="228.6" y="25.4" smashed="yes" rot="MR270">
+<attribute name="NAME" x="226.06" y="23.7236" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="226.695" y="25.908" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="P+7" gate="1" x="220.98" y="33.02" smashed="yes">
+<attribute name="VALUE" x="222.885" y="35.56" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="P+8" gate="1" x="228.6" y="33.02" smashed="yes">
+<attribute name="VALUE" x="230.505" y="35.56" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -5902,12 +5906,6 @@ Matthew Fleetwood</text>
 <wire x1="246.38" y1="25.4" x2="236.22" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="USB_SERIAL_HEADER" gate="A" pin="3"/>
-<wire x1="116.84" y1="-22.86" x2="124.46" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="P+7" gate="1" pin="+5V"/>
-<wire x1="124.46" y1="-22.86" x2="124.46" y2="-10.16" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="POWER_IN" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="17.78" x2="129.54" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
@@ -5926,6 +5924,14 @@ Matthew Fleetwood</text>
 <pinref part="P+5" gate="1" pin="+5V"/>
 <junction x="147.32" y="25.4"/>
 </segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="P+7" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="1"/>
+<pinref part="P+8" gate="1" pin="+5V"/>
+</segment>
 </net>
 <net name="IO1" class="0">
 <segment>
@@ -5943,8 +5949,12 @@ Matthew Fleetwood</text>
 <label x="198.12" y="25.4" size="1.778" layer="95"/>
 <pinref part="ATMEGA328P" gate="G$1" pin="(ADC4)PC4"/>
 <wire x1="208.28" y1="25.4" x2="208.28" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="15.24" x2="220.98" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="COLOR_HEADER" gate="A" pin="5"/>
+<wire x1="228.6" y1="15.24" x2="246.38" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="15.24" x2="228.6" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="228.6" y1="20.32" x2="228.6" y2="15.24" width="0.1524" layer="91"/>
+<junction x="228.6" y="15.24"/>
 </segment>
 </net>
 <net name="XTAL2" class="0">
@@ -6081,8 +6091,12 @@ Matthew Fleetwood</text>
 <pinref part="ATMEGA328P" gate="G$1" pin="(ADC5)PC5"/>
 <wire x1="193.04" y1="27.94" x2="210.82" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="17.78" x2="210.82" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="210.82" y1="17.78" x2="213.36" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="COLOR_HEADER" gate="A" pin="4"/>
+<wire x1="210.82" y1="17.78" x2="220.98" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="220.98" y1="17.78" x2="246.38" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="20.32" x2="220.98" y2="17.78" width="0.1524" layer="91"/>
+<junction x="220.98" y="17.78"/>
 </segment>
 </net>
 <net name="IO0" class="0">
@@ -6111,25 +6125,13 @@ Matthew Fleetwood</text>
 <pinref part="R4" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="COLOR_HEADER" gate="A" pin="4"/>
-<wire x1="223.52" y1="17.78" x2="246.38" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="COLOR_HEADER" gate="A" pin="5"/>
-<wire x1="231.14" y1="15.24" x2="246.38" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,154.94,22.86,ZU4,AGND,GND,,,"/>
+<approved hash="104,1,154.94,17.78,ATMEGA328P,VCC,+5V,,,"/>
+<approved hash="104,1,154.94,25.4,ATMEGA328P,AVCC,+5V,,,"/>
+<approved hash="104,1,154.94,22.86,ATMEGA328P,AGND,GND,,,"/>
 <approved hash="204,1,147.32,83.82,RESET,5-GND,,,,"/>
 </errors>
 </schematic>

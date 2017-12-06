@@ -1,8 +1,8 @@
 
 
-Welcome to the Team14 wiki!
+Welcome to Team 14's Practicum Pages - ECE 411 Fall 2017
 
-This wiki will document our practicum project for the ECE 411 Industrial Design course at PSU for Fall 2017. Here you will find details of our project creation as well as documentation detailing the specifications and operation of our final product - a color scanner device.
+This repository will document our practicum project for the ECE 411 Industrial Design course at PSU for Fall 2017. Here you will find details of our project creation as well as documentation detailing the specifications and operation of our final product - a color scanner device.
 
 Team members:
 
